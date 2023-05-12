@@ -47,7 +47,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="backWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fP-5r-7Mq"/>
-                                    <segue destination="cHe-tl-azS" kind="presentation" id="Ioa-l4-M4l"/>
+                                    <segue destination="cHe-tl-azS" kind="presentation" modalPresentationStyle="fullScreen" id="Ioa-l4-M4l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,7 +55,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="Qdp-eS-aI4" kind="presentation" identifier="toQustionView" modalPresentationStyle="fullScreen" id="iTG-dW-26a"/>
+                        <segue destination="Qdp-eS-aI4" kind="presentation" identifier="toQuestionView" modalPresentationStyle="fullScreen" id="D1n-mo-Asx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
             <objects>
                 <tableViewController id="gj2-FB-cvC" customClass="ListTableViewController" customModule="WordLIst" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5xr-Ml-FmF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -86,7 +86,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="一覧" id="GJY-tA-Cqb">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="p4t-lE-zz5"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="oJw-ey-jua">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="4UN-JW-Zod"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="peJ-cX-BKR">
                             <connections>
                                 <segue destination="cGw-8q-ejO" kind="show" id="MJX-3M-JUb"/>
@@ -103,7 +107,7 @@
             <objects>
                 <viewController id="cGw-8q-ejO" customClass="AddViewController" customModule="WordLIst" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cpy-rm-P6J">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="英語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-bq-3CW">
@@ -182,14 +186,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEX-cG-79H">
-                                <rect key="frame" x="232" y="222" width="52" height="27"/>
+                                <rect key="frame" x="191" y="222" width="186" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWQ-2H-I0m">
-                                <rect key="frame" x="232" y="466" width="52" height="27"/>
+                                <rect key="frame" x="191" y="466" width="186" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -267,7 +271,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cHe-tl-azS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3b-bO-OJO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
