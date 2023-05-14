@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="一覧" id="GJY-tA-Cqb">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="oJw-ey-jua">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="4UN-JW-Zod"/>
+                                <segue destination="TMg-f1-ZY2" kind="unwind" unwindAction="backWithSender:" id="ay8-vm-2hL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="peJ-cX-BKR">
@@ -99,6 +99,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ntu-P0-4l2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="TMg-f1-ZY2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="859" y="770"/>
         </scene>
